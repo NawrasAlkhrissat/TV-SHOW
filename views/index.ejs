@@ -1,0 +1,20 @@
+<% layout('layouts/boilerplate') %>
+<link rel="stylesheet" href="/indexPage.css">
+<h1>TV SHOW</h1>
+    <div class="container py-5">
+        <div class="row gy-4">
+            <% for (let show of shows) { %>
+                <div class="col-md-4">
+                    <div class="box">
+                        <img src="<%= show.image %>" alt="<%= show.name %>" class="img-fluid">
+                        <h3>
+                            <%= show.name %>
+                        </h3>
+                        <h4><a href="/shows/<%= show.id %>" class="btn btn-info">Details</a></h4>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
+
+    <script src="indexPage.js"></script>

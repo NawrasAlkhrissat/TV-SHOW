@@ -1,0 +1,60 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <h1 class="text-center mt-5">New Show</h1>
+        <div class="col-6 offset-3">
+            <form action="/shows" method="post" novalidate class="validated-form">
+                <div>
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Name</label>
+                        <input class="form-control" type="text" id="name" name="show[name]" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="language">Language</label>
+                        <input class="form-control" type="text" id="language" name="show[language]" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="image">Image Url</label>
+                        <input class="form-control" type="text" id="image" name="show[image]" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="mg-3">
+                        <label class="form-label" for="url">Show Url</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="url"
+                                aria-label="Amount (to the nearest dollar)" name="show[url]" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="description">Description</label>
+                        <input class="form-control" type="text" id="description" name="show[dis]" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="type">Type</label>
+                        <input class="form-control" type="text" id="type" name="show[type]" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-success">Add campground</button>
+            </form>
+            <div class="mb-3">
+                <a href="/shows">Cancel</a>
+            </div>
+        </div>
+    </div>

@@ -19,47 +19,6 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
-// app.get('/shows', async (req, res) => {
-//     const shows = await show.find({});
-//     res.render('index.ejs', { shows });
-// })
-
-// app.get('/shows/new', (req, res) => {
-//     res.render('new.ejs');
-// })
-
-// app.post('/shows', async (req, res) => {
-//     const newShow = await new show(req.body.show);
-//     await newShow.save();
-//     res.redirect(`/shows/${newShow._id}`);
-// })
-
-// app.get('/shows/:id', async (req, res) => {
-//     const IdShow = await show.findById(req.params.id);
-//     res.render('details.ejs', { IdShow });
-// })
-
-// app.get('/shows/:id/edit', async (req, res) => {
-//     const IdShow = await show.findById(req.params.id);
-//     res.render('edit.ejs', { IdShow });
-// })
-// app.put('/shows/:id', async (req, res) => {
-//     const { id } = req.params;
-//     const IdShow = await show.findByIdAndUpdate(id, { ...req.body.show });
-//     res.redirect(`/shows/${IdShow._id}`);
-// })
-
-// app.delete('/shows/:id', async (req, res) => {
-//     const IdShow = await show.findByIdAndDelete(req.params.id);
-//     res.redirect('/shows');
-// })
-
-// app.listen(3000, () => {
-//     console.log("on the listen part");
-// })
-
 const validateShow = (data) => {
     const schema = Joi.object({
         name: Joi.string().min(3).required().messages({
